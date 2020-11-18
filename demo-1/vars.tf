@@ -1,4 +1,5 @@
-#as we only define the access_key and secret_key variables here, they do not have any value (default value)
+#as we only define the access_key and secret_key variables here, they do not have any value (default value) because of the security concern. 
+# instead we define their values in the tfvars file
 variable "AWS_ACCESS_KEY" {
 }
 
