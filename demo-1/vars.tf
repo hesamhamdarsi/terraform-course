@@ -1,3 +1,4 @@
+#as we only define the access_key and secret_key variables here, they do not have any value (default value)
 variable "AWS_ACCESS_KEY" {
 }
 
