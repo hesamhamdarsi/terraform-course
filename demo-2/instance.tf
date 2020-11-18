@@ -1,8 +1,11 @@
+# file() indicate that we are going to load a file and then we will give the path of that file as a variable
+# instead of using file, we could simply use the key as a text but it was too long
 resource "aws_key_pair" "mykey" {
   key_name   = "mykey"
   public_key = file(var.PATH_TO_PUBLIC_KEY)
 }
 
+#notice that when you create the following resource, provisioners and connections are child of that
 resource "aws_instance" "example" {
   ami           = var.AMIS[var.AWS_REGION]
   instance_type = "t2.micro"
