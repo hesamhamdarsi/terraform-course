@@ -15,6 +15,7 @@ resource "aws_security_group" "from_europe" {
     #aws_ip_ranges refer to the type of source
     #european_ec2 refer to the name
     #cidr_blocks refer to the attribute
+    # 0 , 50 ???
     cidr_blocks = slice(data.aws_ip_ranges.european_ec2.cidr_blocks, 0, 50)
   }
   tags = {
