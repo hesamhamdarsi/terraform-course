@@ -1,4 +1,5 @@
 # nat gw
+#creating aws elastic ip 
 resource "aws_eip" "nat" {
   vpc = true
 }
@@ -23,6 +24,7 @@ resource "aws_route_table" "main-private" {
 }
 
 # route associations private
+#these are for private subnets to only to access to internet
 resource "aws_route_table_association" "main-private-1-a" {
   subnet_id      = aws_subnet.main-private-1.id
   route_table_id = aws_route_table.main-private.id
