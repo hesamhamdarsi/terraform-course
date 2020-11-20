@@ -5,6 +5,7 @@ resource "aws_vpc" "main" {
   enable_dns_support   = "true"
   enable_dns_hostnames = "true"
   enable_classiclink   = "false"
+ #this tag will be set in AWS and the name of VPC will be main
   tags = {
     Name = "main"
   }
@@ -100,6 +101,7 @@ resource "aws_route_table" "main-public" {
 }
 
 # route associations public
+# for our public subnets, we need to associate spesific routing table with the main routing table
 resource "aws_route_table_association" "main-public-1-a" {
   subnet_id      = aws_subnet.main-public-1.id
   route_table_id = aws_route_table.main-public.id
