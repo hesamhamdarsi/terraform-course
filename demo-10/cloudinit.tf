@@ -1,4 +1,4 @@
-# in this template_file we have our scripts will go in 
+# in this template_file we have our scripts will go in template_cloudinit_config
 data "template_file" "init-script" {
   template = file("scripts/init.cfg")
   vars = {
