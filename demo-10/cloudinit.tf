@@ -15,7 +15,7 @@ data "template_file" "shell-script" {
 }
 
 
-# In template_cloudinit_config we have our rendered scripts in template_files  
+# In template_cloudinit_config we have our rendered scripts in both template_files  
 data "template_cloudinit_config" "cloudinit-example" {
   gzip          = false
   base64_encode = false
